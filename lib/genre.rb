@@ -1,23 +1,17 @@
 class Genre
   attr_reader :name, :genre
-  @@all =[]
-
+ attr_accessor :song
   def initialize(name)
-    @name= name
-    @@all <<self
-  end
-
-  def self.all
-    @@all
-  end
-
+   @name = name
+ end
   def songs
-    Song.all.select do |song|
-      song.genre == self
-  end
+   Song.all.select do |song|
+     song.genre == self
+   end
+ end
   def artists
-    Song.all.map do |song|
-      song.artist
-    end
-  end
+   Song.all.map do |song|
+     song.artist
+   end
+ end
 end
