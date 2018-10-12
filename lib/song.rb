@@ -17,11 +17,4 @@ class Song
     @artist
   end
 
-  def genre
-    @genre
-  end
-
-  def name
-    @name
-  end
-end
+  
